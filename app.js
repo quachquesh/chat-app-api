@@ -220,7 +220,7 @@ module.exports = app;
 //     console.log(`API server listening on port 3001`)
 //   })
 // }
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 server.listen(port, () => {
   console.log(`server listening on *:${port}`);
 });
