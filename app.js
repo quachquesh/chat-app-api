@@ -63,7 +63,7 @@ const mongodb = process.env.PRODUCTION
   : 'mongodb://localhost:27017/chat-app';
 
 mongoose
-  .connect(mongodb)
+  .connect(mongodbUrl)
   .then(() => console.log('Kết nối database thành công'))
   .catch((err) => console.log(err));
 
