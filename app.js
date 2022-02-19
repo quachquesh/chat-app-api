@@ -74,7 +74,7 @@ route(app);
 const io = new Server(server, {
   cors: {
     origin: [
-      'localhost:3000',
+      'http://localhost:3000',
       'http://nqt-chat-app.herokuapp.com',
       'https://nqt-chat-app.herokuapp.com',
     ],

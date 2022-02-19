@@ -1,18 +1,18 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const messageSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'users' },
-    receiver: { type: Schema.Types.ObjectId, ref: 'users' },
-    content: String,
+    user: { type: Schema.Types.ObjectId, ref: 'users', required: true },
+    receiver: { type: Schema.Types.ObjectId, ref: 'users', required: true },
+    content: { type: String, required: true },
     readed: { type: Boolean, default: false },
   },
   {
     timestamps: true,
     versionKey: false,
   }
-)
+);
 
 const friendSchema = new Schema(
   {
@@ -24,6 +24,6 @@ const friendSchema = new Schema(
     timestamps: true,
     versionKey: false,
   }
-)
+);
 
-module.exports = mongoose.model('friends', friendSchema)
+module.exports = mongoose.model('friends', friendSchema);
